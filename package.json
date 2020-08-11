@@ -1,0 +1,24 @@
+{
+  "name": "React-Social-Dashboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andresmorenoj/React-Social-Dashboard.git"
+  },
+  "keywords": [],
+  "author": "Andres Moreno <andresmorenojf@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andresmorenoj/React-Social-Dashboard/issues"
+  },
+  "homepage": "https://github.com/andresmorenoj/React-Social-Dashboard#readme",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
