@@ -1,12 +1,12 @@
 import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+/* import { BrowserRouter, Route, Switch } from "react-router-dom"; */
 import Layout from "./Layout";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <React.Fragment>
       <Layout></Layout>
-    </BrowserRouter>
+    </React.Fragment>
   );
 };
 
