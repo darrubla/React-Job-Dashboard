@@ -1,18 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 
-import Tags from "./Tags.";
+import Tags from "./Tags";
 import "../assets/styles/components/JobCard.scss";
+import "../assets/styles/components/Tags.scss";
 
 function JobCard(props) {
   const { logo, company, new: boolean, featured, position, postedAt, contract, location, languages } = props;
-  //console.log(props.new);
+
+  /*  const [languagess, setLanguages] = useState([]); */
+
+  console.log("Languages ", languages);
+
+  let tag;
+
+  if (languages) {
+    tag = languages.map((item) => <Tags tag={item} />);
+  }
 
   function featureState() {
     console.log(featured);
     if (featured) {
       return (
         <React.Fragment>
-          <p className="card__jobInformation-featured">{"Feauture"}</p>
+          <p className="card__jobInformation-featured">{"Feautured"}</p>
         </React.Fragment>
       );
     }
@@ -28,25 +38,6 @@ function JobCard(props) {
     }
   }
 
-  /* function featureState() {
-    console.log(featured);
-    if (!featured) {
-      return null;
-    } else {
-      return "Featured";
-      //return null;
-    }
-  }
-
-  function newState() {
-    if (!props.new) {
-      return null;
-    } else {
-      //return null;
-      return "New";
-    }
-  }
- */
   return (
     <article className="card__container">
       <div className="card__container__jobInformation">
@@ -73,13 +64,17 @@ function JobCard(props) {
         </div>
       </div>
       <div className="card__tags">
-        {/*   {languages.map((tag) => {
-          console.log("esto es un tag", tag);
-          return <Tags {...tag} />;
+        {tag}
+        {/*  {languages.forEach((tag) => {
+          return <Tags tag={tag} />;
         })} */}
+        {/* {languages.map((tag) => {
+          console.log("esto es un tag", <Tags />);
+          return <Tags {...tag} key={tag} />;
+        })} */}
+        {/*   <Tags tag={"Hola"} />
         <Tags tag={"Hola"} />
-        <Tags tag={"Hola"} />
-        <Tags tag={"Hola"} />
+        <Tags tag={"Hola"} /> */}
       </div>
     </article>
   );
