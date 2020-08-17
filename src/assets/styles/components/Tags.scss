@@ -1,0 +1,12 @@
+@import "../Vars.scss";
+
+h3 {
+  margin-left: 20px;
+  font-size: 1.2em;
+  font-weight: 500;
+  color: $primaryColor;
+  background-color: $color2;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}

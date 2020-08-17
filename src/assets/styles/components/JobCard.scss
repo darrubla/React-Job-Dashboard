@@ -15,6 +15,7 @@
 
   &:hover {
     border-left: 6px solid $primaryColor;
+    padding-left: 44px;
   }
 }
 
@@ -36,7 +37,7 @@
 .card__jobInformation-top-elements {
   color: white;
   text-transform: uppercase;
-  padding: 8px 15px;
+  padding: 8px 15px 6px;
   border-radius: 20px;
   font-size: 0.8em;
   line-height: normal;
@@ -50,17 +51,17 @@
     margin: 0 10px 0 0;
   }
 
-  p:first-child {
+  .card__jobInformation-company {
     color: $primaryColor;
     font-size: 1em;
   }
 
-  p:nth-child(2n) {
+  .card__jobInformation-new {
     background-color: $primaryColor;
     @extend .card__jobInformation-top-elements;
   }
 
-  p:last-child {
+  .card__jobInformation-featured {
     background-color: $color4;
     @extend .card__jobInformation-top-elements;
   }
@@ -96,15 +97,4 @@ h2 {
 .card__tags {
   display: flex;
   align-items: center;
-
-  h3 {
-    margin-left: 20px;
-    font-size: 1.2em;
-    font-weight: 500;
-    color: $primaryColor;
-    background-color: $color2;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
 }
