@@ -1,24 +1,41 @@
-import React, { useState } from "react";
+import React from "react";
 
-import Tags from "./Tags";
+import RoleTag from "./RoleTag";
+import LevelTag from "./LevelTag";
+import LanguagesTag from "./LanguagesTag";
+import ToolsTag from "./ToolsTag";
 import "../assets/styles/components/JobCard.scss";
 import "../assets/styles/components/Tags.scss";
 
 function JobCard(props) {
-  const { logo, company, new: boolean, featured, position, postedAt, contract, location, languages } = props;
+  const { logo, company, new: boolean, featured, position, role, level, postedAt, contract, location, languages, tools } = props;
 
-  /*  const [languagess, setLanguages] = useState([]); */
+  let roleTag;
+  let levelTag;
+  let languagesTag;
+  let toolsTag;
 
-  console.log("Languages ", languages);
+  if (role) {
+    roleTag = <RoleTag role={role} />;
+  }
 
-  let tag;
+  if (level) {
+    levelTag = <LevelTag level={level} />;
+  }
+
+  if (level) {
+    levelTag = <LevelTag level={level} />;
+  }
 
   if (languages) {
-    tag = languages.map((item) => <Tags tag={item} />);
+    languagesTag = languages.map((item) => <LanguagesTag language={item} />);
+  }
+
+  if (tools) {
+    toolsTag = tools.map((item) => <ToolsTag tools={item} />);
   }
 
   function featureState() {
-    console.log(featured);
     if (featured) {
       return (
         <React.Fragment>
@@ -47,7 +64,6 @@ function JobCard(props) {
         <div className="card__jobInformation">
           <div className="card__jobInformation-top">
             <p className="card__jobInformation-company">{company}</p>
-
             {newState()}
             {featureState()}
           </div>
@@ -64,17 +80,7 @@ function JobCard(props) {
         </div>
       </div>
       <div className="card__tags">
-        {tag}
-        {/*  {languages.forEach((tag) => {
-          return <Tags tag={tag} />;
-        })} */}
-        {/* {languages.map((tag) => {
-          console.log("esto es un tag", <Tags />);
-          return <Tags {...tag} key={tag} />;
-        })} */}
-        {/*   <Tags tag={"Hola"} />
-        <Tags tag={"Hola"} />
-        <Tags tag={"Hola"} /> */}
+        {roleTag} {levelTag} {languagesTag} {toolsTag}
       </div>
     </article>
   );
