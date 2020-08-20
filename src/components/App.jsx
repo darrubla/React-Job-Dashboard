@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-/* import { BrowserRouter, Route, Switch } from "react-router-dom"; */
 import Layout from "./Layout";
 import JobCardContainer from "./JobCardContainer";
 import JobCard from "./JobCard";
-import logo from "../assets/images/photosnap.svg";
 import dataInfo from "../data.json";
 
 function App() {
