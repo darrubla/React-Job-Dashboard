@@ -8,18 +8,43 @@ import account from "../assets/images/account.svg";
 import eyecam from "../assets/images/eyecam-co.svg";
 import faceit from "../assets/images/faceit.svg";
 import insure from "../assets/images/insure.svg";
-import loopStidios from "../assets/images/loop-studios.svg";
+import loopStudios from "../assets/images/loop-studios.svg";
 import manage from "../assets/images/manage.svg";
 import myHome from "../assets/images/myhome.svg";
 import photosnap from "../assets/images/photosnap.svg";
+import shortly from "../assets/images/shortly.svg";
+import airFilter from "../assets/images/the-air-filter-company.svg";
 import "../assets/styles/components/JobCard.scss";
 import "../assets/styles/components/Tags.scss";
 
 function JobCard(props) {
-  const { logo, company, new: boolean, featured, position, role, level, postedAt, contract, location, languages, tools } = props;
+  const {
+    logo,
+    company,
+    new: boolean,
+    featured,
+    position,
+    role,
+    level,
+    postedAt,
+    contract,
+    location,
+    languages,
+    tools,
+  } = props;
 
-  const logos = [account, eyecam, faceit, insure, loopStidios, manage, myHome, photosnap];
-  console.log("logos: ", logos);
+  const logos = [
+    photosnap,
+    manage,
+    account,
+    myHome,
+    loopStudios,
+    faceit,
+    shortly,
+    insure,
+    eyecam,
+    airFilter,
+  ];
 
   let roleTag;
   let levelTag;
@@ -65,12 +90,11 @@ function JobCard(props) {
       );
     }
   }
-
   return (
     <article className="card__container">
       <div className="card__container__jobInformation">
         <figure>
-          <img src={"../assets/images" + logo.split("images")[1]} />
+          <img src={logos[props.id - 1]} alt="" />
         </figure>
         <div className="card__jobInformation">
           <div className="card__jobInformation-top">
