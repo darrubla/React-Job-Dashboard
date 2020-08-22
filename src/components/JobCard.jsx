@@ -18,33 +18,9 @@ import "../assets/styles/components/JobCard.scss";
 import "../assets/styles/components/Tags.scss";
 
 function JobCard(props) {
-  const {
-    logo,
-    company,
-    new: boolean,
-    featured,
-    position,
-    role,
-    level,
-    postedAt,
-    contract,
-    location,
-    languages,
-    tools,
-  } = props;
+  const { logo, company, new: boolean, featured, position, role, level, postedAt, contract, location, languages, tools } = props;
 
-  const logos = [
-    photosnap,
-    manage,
-    account,
-    myHome,
-    loopStudios,
-    faceit,
-    shortly,
-    insure,
-    eyecam,
-    airFilter,
-  ];
+  const logos = [photosnap, manage, account, myHome, loopStudios, faceit, shortly, insure, eyecam, airFilter];
 
   let roleTag;
   let levelTag;

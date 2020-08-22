@@ -24,6 +24,9 @@
 
   li {
     list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 
@@ -34,6 +37,15 @@
   li {
     margin-right: 15px;
   }
+}
+
+.header__navbar-input {
+  border-radius: 10px;
+  border-style: none;
+  outline: none;
+  display: block;
+  width: 90%;
+  height: 50px;
 }
 
 .header__navbar-clearButton {
